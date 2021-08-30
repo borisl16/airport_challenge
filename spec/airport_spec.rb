@@ -1,3 +1,2 @@
-desribe 'Airport' do
-    
+describe 'Airport' do
 end
