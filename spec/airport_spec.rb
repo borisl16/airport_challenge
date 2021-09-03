@@ -5,11 +5,10 @@ describe Airport do
 
     context 'landing on the airport' do
         it 'prevent landing when airport is full' do
-            subject.land(Plane.new)
+            subject.capacity.times { subject.land(Plane.new) }
             expect { subject.land Plane.new }.to raise_error 'Airport is full'
         end
     end
-
 
      it 'instruct a plane to land at airport' do
         expect(subject). to respond_to :land
@@ -20,5 +19,5 @@ describe Airport do
      end
 
 
-     
+
 end
